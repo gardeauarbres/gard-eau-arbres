@@ -1,0 +1,11 @@
+name: gard_eau_arbres
+description: MVP Gard Eau Arbres
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
