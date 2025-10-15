@@ -4,10 +4,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: #F4EFE7;
   color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   text-align: center;
 }
 
@@ -33,4 +29,59 @@ button {
 
 button:hover {
   background-color: #1c6e1c;
+}
+
+/* Splash / Loader */
+#splash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F4EFE7;
+  z-index: 9999;
+  transition: opacity 300ms ease;
+}
+
+#splash.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#splash .brand {
+  max-width: 420px;
+  padding: 24px;
+}
+
+#splash img {
+  width: 96px;
+  height: 96px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+#splash h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0.25rem;
+  color: #1f3d1f;
+}
+
+#splash p {
+  margin: 0 0 1.25rem;
+  color: #4b4b4b;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid rgba(34, 139, 34, 0.25);
+  border-top-color: #228B22;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
