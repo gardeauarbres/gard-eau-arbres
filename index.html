@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Gard Eau Arbres</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#228B22">
+  <meta name="description" content="Application web Gard Eau Arbres – sensibilisation et quiz autour de l'eau et des arbres.">
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/png" href="icons/Icon-192.png">
 </head>
 <body>
+  <noscript>
+    Veuillez activer JavaScript pour utiliser l'application Gard Eau Arbres.
+  </noscript>
+
+  <!-- Splash / Loader affiché jusqu'au chargement Flutter -->
+  <div id="splash" role="status" aria-live="polite">
+    <div class="brand">
+      <img src="icons/Icon-192.png" alt="" aria-hidden="true">
+      <h1>Gard Eau Arbres</h1>
+      <p>Chargement de l'application…</p>
+      <div class="spinner" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Charge l'application Flutter -->
   <script src="main.dart.js" type="application/javascript"></script>
+  <script>
+    window.addEventListener('load', function () {
+      var splash = document.getElementById('splash');
+      if (splash) {
+        splash.classList.add('hidden');
+      }
+    });
+  </script>
 </body>
 </html>
