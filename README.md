@@ -1,7 +1,7 @@
 # Gard Eau Arbres MVP 
 Flutter + FastAPI + Docker 
  
-## D‚marrage rapide 
+## Demarrage rapide 
 ```bash 
 cp .env.example .env 
 docker-compose up --build 
